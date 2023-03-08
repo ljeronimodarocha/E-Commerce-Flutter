@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/default_button.dart';
 import '../../size_config.dart';
-import 'ColorDots.dart';
+import 'color_dots.dart';
 import 'product_images.dart';
 import 'top_rounded_container.dart';
 
