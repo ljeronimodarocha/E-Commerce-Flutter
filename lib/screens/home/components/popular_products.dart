@@ -1,3 +1,4 @@
+import 'package:e_commerce/details/details_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/product_card.dart';
@@ -22,7 +23,13 @@ class PopularProducts extends StatelessWidget {
             children: [
               ...List.generate(
                 demoProducts.length,
-                (index) => ProductCard(product: demoProducts[index]),
+                (index) => ProductCard(
+                  product: demoProducts[index],
+                  press: () => Navigator.of(context).pushNamed(
+                      DetailsScreen.routeName,
+                      arguments: ProductDetailsArguments(
+                          product: demoProducts[index])),
+                ),
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
